@@ -1,0 +1,827 @@
+dataQuir APIs
+=============
+datQuir APIs have been divided into four major groups:
+
+	* Management APIs
+	* Indexing APIs
+	* Query APIs
+	* Analytics APIs
+
+**Note**
+All the APIs except the ëQuery APIsí would require private key uniquely created for the account. Query APIs require the publicly shared ëengine-keyí for queries intended for the particular engine. 
+
+Manage Engine API
+-----------------
+**Create Search and Engagement Engine**
+
+
+-   **Path**: /dq-api/engines
+
+-   **HTTP Method**: POST
+
+-   **Request Payload**:
+
+::
+
+	{
+		"engineNmae":"My webstore serach engine",
+		"engineType":"CUSTOM",
+		"websiteUrl":"http://dataquir.com",
+		"timeZone":"Asia/Kolkata",
+		"businessType":"E-commerce"
+	}
+
+
+**Get all engines details**
+
+-   **Path:** /dq-api/engines
+
+-   **HTTP Method:** GET
+
+**Get a particular engine details**
+
+-   **Path:** /dq-api/engines/ {engineId}
+
+-   **HTTP Method:** GET
+
+**Get total records in the engine**
+
+-   **Path:** /dq-api/engines/ {engineId}/ totalRecords
+
+-   **HTTP Method:** GET
+
+**Delete an Engine**
+
+-   **Path:** /dq-api/engines/ {engineId}
+
+-   **HTTP Method:** DELETE
+
+**Define a feed plan**
+
+-   **Path**: / dq-api/engines/{engineId}/feedPlan
+
+-   **HTTP Method**: POST
+
+-   **Request Payload**:
+
+::
+
+	{  
+		"fields":[  
+		  {  
+			 "name":"id",
+			 "type":"text",
+			 "search":false,
+			 "multiValued":false
+		  },
+		  {  
+			 "name":"rec_title",
+			 "type":"text",
+			 "search":true,
+			 "multiValued":false
+		  },
+		  {  
+			 "name":"rec_type",
+			 "type":"text",
+			 "search":true,
+			 "multiValued":false
+		  },
+		  {  
+			 "name":"mov_id",
+			 "type":"text",
+			 "search":false,
+			 "multiValued":false
+		  },
+		  {  
+			 "name":"mov_name",
+			 "type":"text",
+			 "search":true,
+			 "multiValued":false
+		  },
+		  {  
+			 "name":"genre",
+			 "type":"text",
+			 "search":true,
+			 "multiValued":true
+		  },
+		  {  
+			 "name":"directed_by",
+			 "type":"text",
+			 "search":true,
+			 "multiValued":true
+		  }
+	   ],
+	   "autoOnTitle":true,
+	   "geoLocation":false
+	}
+
+
+**Define Search Relevance Model**
+
+-   **Path**: / dq-api/engines/{engineId}/ searchRelevanceModel
+
+-   **HTTP Method**: POST
+
+-   Request Payload:
+
+::
+	
+	{  
+	   "fieldRelevanceConfMap":{  
+		  "f1":{  
+			 "weight":2.0,
+			 "radius":2.0,
+			 "s":0.025
+		  },
+		  "f2":{  
+			 "weight":2.5,
+			 "daysInterval":5.0,
+			 "s":0.005
+		  }
+	   }
+	}
+
+
+**Define Synonyms**
+
+-   **Path**: / dq-api/engines/{engineId}/ synonyms
+
+-   **HTTP Method**: POST
+
+-   **Request Payload**:
+
+::
+	
+	[  
+	   [  
+		  "movie",
+		  "cinema",
+		  "picture",
+		  "film"
+	   ],
+	   [  
+		  "actor",
+		  "artist",
+		  "hero"
+	   ]
+	]
+
+
+**Define Similarity Model**
+
+-   **Path:** / dq-api/engines/{engineId}/ similarityModel
+
+-   **HTTP Method:** POST
+
+-   **Request Payload:**
+
+::
+	
+	{  
+	   "fieldSimilarityConfigMap":{  
+		  "f1":{  
+			 "weight":3.0,
+			 "daysInterval":4,
+			 "s":0.02
+		  },
+		  "f3":{  
+			 "weight":2.5,
+			 "radius":10.0,
+			 "s":0.05
+		  },
+		  "f2":{  
+			 "weight":2.5,
+			 "range":4.0
+		  }
+	   }
+	}
+
+	
+Indexing API
+------------
+
+**Feed upload**
+
+-   **Path:** / dq-api/engines/{engineId}/ feed
+
+-   **HTTP Method:** POST
+
+-   **Request Param**
+
+    -   feedFile
+
+-   **content-type**: multipart/\*
+
+**Batch Update**
+
+-   **Path:** / dq-api/engines/{ engineId}/ batch
+
+-   **HTTP Method:** POST
+
+-   **Request Payload**
+
+::
+
+	[  
+	   {  
+		  "id":"24",
+		  "rec_type":"movie",
+		  "rec_title":"21 Grams",
+		  "mov_name":"21 Grams",
+		  "directed_by":[  
+			 "Alejandro Gonz√°lez I√±√°rritu"
+		  ],
+		  "genre":[  
+			 "Thriller",
+			 "Ensemble Film",
+			 "Crime Fiction",
+			 "Drama"
+		  ],
+		  "mov_id":"/en/21_grams"
+	   },
+	   ...
+	]
+
+**Batch Delete**
+
+-   **Path:** / dq-api/engines/{ engineId}/ batch
+
+-   **HTTP Method:** DELETE
+
+-   **Request Payload**
+
+::
+
+	{  
+	   "ids":[  
+		  201,
+		  304,
+		  ...
+	   ]
+	}
+
+
+**Get Job Status**
+
+-   **Path:** / dq-api/engines/{ engineId}/ batch/ {jobId}
+
+-   **HTTP Method:** GET
+
+**Get Last 5 Jobs Status**
+
+-   **Path:** / dq-api/engines/{ engineId}/ batch
+
+-   **HTTP Method:** GET
+
+**Add / Update a Record**
+
+-   **Path:** / dq-api/engines/{ engineId}/ record
+
+-   **HTTP Method:** POST
+
+-   **Request Payload**
+
+::
+
+	{  
+	   "id":"24",
+	   "rec_type":"movie",
+	   "rec_title":"21 Grams",
+	   "mov_name":"21 Grams",
+	   "directed_by":[  
+		  "Alejandro Gonz√°lez I√±√°rritu"
+	   ],
+	   "genre":[  
+		  "Thriller",
+		  "Ensemble Film",
+		  "Crime Fiction",
+		  "Drama"
+	   ],
+	   "mov_id":"/en/21_grams"
+	}
+
+**Delete a Record**
+
+-   **Path:** / dq-api/ {engineId}/record/{recordId}
+
+-   **HTTP Method:** DELETE
+
+**Get a Record**
+
+-   **Path:** / dq-api/ {engineId}/record/{recordId}
+
+-   **HTTP Method:** GET
+
+**Get Multiple Records**
+
+-   **Path:** / dq-api/ {engineId}/record/records
+
+-   **HTTP Method:** POST
+
+-   Request Payload
+
+:: 
+
+	[  
+	   201,
+	   436,
+	   ...
+	]
+
+
+**Clear all Records**
+
+-   **Path:** / dq-api/ {engineId}/clear
+
+-   **HTTP Method:** DELETE
+
+**Crawl a Website**
+
+-   **Path:** / dq-api/ {engineId}/ crawl
+
+-   **HTTP Method:** POST
+
+-   **Request Payload**
+
+::
+
+	{  
+	   "websiteUrl":"http://dataquir.com",
+	   "includeRules":{  
+		  "starts_with":"content"
+	   },
+	   "excludeRules":{  
+		  "contains":"admin"
+	   }
+	}
+
+
+Query API
+---------
+
+**Search**
+
+-   **Path:** / dq-api/ {engineId}/ search
+
+-   **HTTP Method:** GET
+
+-   **Request Parameters**
++----------------+-------------------+-----------------+
+| **Param Name** | **Type / Values** | **Description** |
++================+===================+=================+
+| q              |                   |                 |
++----------------+-------------------+-----------------+
+| filter         |                   |                 |
++----------------+-------------------+-----------------+
+| rangeFilter    |                   |                 |
++----------------+-------------------+-----------------+
+| facet          |                   |                 |
++----------------+-------------------+-----------------+
+| rangeFacet     |                   |                 |
++----------------+-------------------+-----------------+
+| sort           |                   |                 |
++----------------+-------------------+-----------------+
+| groupOnField   |                   |                 |
++----------------+-------------------+-----------------+
+| lat            |                   |                 |
++----------------+-------------------+-----------------+
+| lng            |                   |                 |
++----------------+-------------------+-----------------+
+| radius         |                   |                 |
++----------------+-------------------+-----------------+
+| fl             |                   |                 |
++----------------+-------------------+-----------------+
+| highlight      |                   |                 |
++----------------+-------------------+-----------------+
+| hlfl           |                   |                 |
++----------------+-------------------+-----------------+
+| spellcheck     |                   |                 |
++----------------+-------------------+-----------------+
+| start          |                   |                 |
++----------------+-------------------+-----------------+
+| limit          |                   |                 |
++----------------+-------------------+-----------------+
+
+
+
+
+
+
+
+
+
+
+
+**Suggest**
+
+-   **Path:** / dq-api/ {engineId}/ suggest
+
+-   **HTTP Method:** GET
+
+-   **Request Parameters**
+
++----------------+-------------------+-----------------+
+| **Param Name** | **Type / Values** | **Description** |
++================+===================+=================+
+| q              |                   |                 |
++----------------+-------------------+-----------------+
+| filter         |                   |                 |
++----------------+-------------------+-----------------+
+| sort           |                   |                 |
++----------------+-------------------+-----------------+
+| groupOnField   |                   |                 |
++----------------+-------------------+-----------------+
+| fl             |                   |                 |
++----------------+-------------------+-----------------+
+| highlight      |                   |                 |
++----------------+-------------------+-----------------+
+| hlfl           |                   |                 |
++----------------+-------------------+-----------------+
+| start          |                   |                 |
++----------------+-------------------+-----------------+
+| limit          |                   |                 |
++----------------+-------------------+-----------------+
+
+
+**Default Search**
+
+Just following parameter is needed for default search:
+	* q ( query string)
+	* start 
+	* limit
+
+Example ñ q=nymar&start=0&limit=10
+
+**Filters**
+You can narrow down the search results by applytion filters.
+Filters are of following two type:
+	* Text Filter
+	* Range Filter
+	
+	**Text Filter**
+	
+	Text filters are applied on the 'text' fields such as - genre, tags, country, clubs etc.
+	Parameter - filter
+	Example\-
+	
+	Let's suppose, we want to filter search result by the criteria
+	
+	* colour of the item is either red or blue
+	* shape of the item is either cubical or spherical
+
+	Add following parameter to the query request
+	filter=color:red|blue,shape:cubical|spherical
+
+	**Note**
+	
+	* Filters on different fields are separated by comma
+	* Filters on multiple values of the same field are separated by pipe (|)
+	
+	**Range Filter**
+
+	Range filters work with numeric data type or date data type. For example search result can be filtered by age range, salaary range, rating range, price range etc.
+	Parameter - rangeFilter
+	
+	Example\-
+	
+	We need to filter the search result by age 20-25 or 30-35 and rating more than 3, add following parameter to the query request
+	rangeFilter=age:25-35|30-35,ratingg:3-*
+	
+	**Note**
+
+	* Filters on different fields are separated by comma
+	* Filters on multiple values of the same field are seperated by pipe (|)
+	* Range is specified as a-b where a is the lower limit and b is the upper limit
+	* For open intervals such as for less than 100, use *-100 and for more than 100 use 100-*
+	
+	
+**Facet**
+
+Faceting is the arrangement of search results into categories based on indexed terms. Searchers are presented with the indexed terms, along with numerical counts of how many matching documents were found were each term. Faceting makes it easy for users to explore search results, narrowing in on exactly the results they are looking for.
+
+Similar to filters, facets are of following two types:
+	* Text Facet
+	* Range Facet
+
+	**Text Facet**
+	
+	Apllied on 'text' fields.
+	Parameter \- facet
+	Example
+	Suppose we want the count of each 'country' and 'club' fields in the search result, add following parameter to the query request
+	facet=country,club
+
+	**Range Facet**
+
+	Range facets work with numeric data type or date data type.
+	Parameter \- rangeFacet
+	Example \-
+	Suppose we want the count of following age ranges in the search result
+	* less than 18
+	* 19 to 35
+	* 36 t0 60
+	* more than 60
+
+	Add following parameter to the query string
+	
+	rangeFacet=age:*-18|19-35|36-60|60-*
+
+	Range facets on two numeric fields:
+	
+	rangeFacet=age:*-18|19-35|36-60|60-*,rating:*-2|2-3|3-*
+
+	**Note**
+	
+	* Range facets for different fields are separated by comma
+	* Range facet count of multiple ranges of the same field are separated by pipe (|)
+	* Range is specified as a-b where a is the lower limit and b is the upper limit
+	* For open intervals such as for less than 100, use *-100 and for more than 100 use 100-*
+
+**Sorting**
+
+Search results are by default sorted on the basis of relevance score. Results can be sorted on the basis of any other criteria such \ñ alphabetical sort on name or sort by age descending.
+
+Parameter
+
+sort : <field1> asc|desc,<field2>asc|desc
+
+Example : sort=rating asc,age desc
+
+**Highlighting**
+
+Highlighting is used to highlight the match query terms in the search result.
+
+Parameters
+
+highlight : true|false
+
+hlfl : comma separated fields list
+
+
+**SpellCheck**
+
+Spellcheck can be used to suggest the correct spelling for the misspelt words in query.
+
+Patameters
+
+Spellcheck : true|false
+
+**Geo Spatial Queries**
+
+[TBC]
+
+
+
+**Tune Search Relevance**
+
+-   **Path:** / dq-api/ {engineId}/ tuneRelevancy
+
+-   **HTTP Method:** POST
+
+-   **Request Payload**
+
+::
+
+	{  
+	   "searchParam":{  
+		  "q":"shop"
+	   },
+	   "searchRelevanceModel":{  
+		  "fieldRelevanceConfMap":{  
+			 "f1":{  
+				"weight":2,
+				"daysInterval":null,
+				"radius":2,
+				"s":0.025
+			 },
+			 "f2":{  
+				"weight":2.5,
+				"daysInterval":5,
+				"radius":null,
+				"s":0.005
+			 }
+		  }
+	   }
+	}
+
+
+**Tune Similarity Model**
+
+-   **Path:** / dq-api/ {engineId}/ tuneSimilarityModel
+
+-   **HTTP Method:** POST
+
+-   **Request Payload**
+
+::
+
+	{  
+	   " recordId":"202",
+	   " model":{  
+		  " fieldSimilarityConfigMap":{  
+			 "f1":{  
+				"weight":2,
+				"daysInterval":null,
+				"radius":2,
+				"s":0.025
+			 },
+			 "f2":{  
+				"weight":2.5,
+				"daysInterval":5,
+				"radius":null,
+				"s":0.005
+			 }
+		  }
+	   }
+	}
+
+**Get Similar Records**
+
+-   **Path:** / dq-api/ /{engineId}/similar/{recordId}
+
+-   **HTTP Method:** GET
+
+
+Analytics API
+-------------
+
+**Search analytics Overview**
+
+-   **Path:** / dq-api/ {engineId}/ search/stats
+
+-   **HTTP Method:** GET
+
+-   **Request Params**
+
++----------------+-------------------+-----------------+
+| **Param Name** | **Type / Values** | **Description** |
++================+===================+=================+
+| engineId       |                   |                 |
++----------------+-------------------+-----------------+
+| From           |                   |                 |
++----------------+-------------------+-----------------+
+| To             |                   |                 |
++----------------+-------------------+-----------------+
+
+**Top Queries**
+
+-   **Path:** / dq-api/ {engineId}/ search/stats/ topQueries
+
+-   **HTTP Method:** GET
+
+-   **Request Params**
+
++----------------+-------------------+-----------------+
+| **Param Name** | **Type / Values** | **Description** |
++================+===================+=================+
+| engineId       |                   |                 |
++----------------+-------------------+-----------------+
+| From           |                   |                 |
++----------------+-------------------+-----------------+
+| To             |                   |                 |
++----------------+-------------------+-----------------+
+
+**Top Docs**
+
+-   **Path:** / dq-api/ {engineId}/ search/stats/ topDocs
+
+-   **HTTP Method:** GET
+
+-   **Request Params**
++----------------+-------------------+-----------------+
+| **Param Name** | **Type / Values** | **Description** |
++================+===================+=================+
+| engineId       |                   |                 |
++----------------+-------------------+-----------------+
+| From           |                   |                 |
++----------------+-------------------+-----------------+
+| To             |                   |                 |
++----------------+-------------------+-----------------+
+
+**Rate & Volume**
+
+-   **Path:** / dq-api/ {engineId}/ search/stats/ rateAndVolume
+
+-   **HTTP Method:** GET
+
+-   **Request Params**
+
++----------------+-------------------+-----------------+
+| **Param Name** | **Type / Values** | **Description** |
++================+===================+=================+
+| engineId       |                   |                 |
++----------------+-------------------+-----------------+
+| From           |                   |                 |
++----------------+-------------------+-----------------+
+| To             |                   |                 |
++----------------+-------------------+-----------------+
+| interval       |                   |                 |
++----------------+-------------------+-----------------+
+| tzOffset       |                   |                 |
++----------------+-------------------+-----------------+
+
+**CTR**
+
+-   **Path:** / dq-api/ {engineId}/ search/stats/ ctr
+
+-   **HTTP Method:** GET
+
+-   **Request Params**
+
++----------------+-------------------+-----------------+
+| **Param Name** | **Type / Values** | **Description** |
++================+===================+=================+
+| engineId       |                   |                 |
++----------------+-------------------+-----------------+
+| From           |                   |                 |
++----------------+-------------------+-----------------+
+| To             |                   |                 |
++----------------+-------------------+-----------------+
+| interval       |                   |                 |
++----------------+-------------------+-----------------+
+| tzOffset       |                   |                 |
++----------------+-------------------+-----------------+
+
+**Search Relevance**
+
+-   **Path:** / dq-api/ {engineId}/ search/stats/ searchRelevance
+
+-   **HTTP Method:** GET
+
+-   **Request Params**
+
++----------------+-------------------+-----------------+
+| **Param Name** | **Type / Values** | **Description** |
++================+===================+=================+
+| engineId       |                   |                 |
++----------------+-------------------+-----------------+
+| From           |                   |                 |
++----------------+-------------------+-----------------+
+| To             |                   |                 |
++----------------+-------------------+-----------------+
+| interval       |                   |                 |
++----------------+-------------------+-----------------+
+| tzOffset       |                   |                 |
++----------------+-------------------+-----------------+
+
+**Sort Options**
+
+-   **Path:** / dq-api/ {engineId}/ search/stats/ sortOptions
+
+-   **HTTP Method:** GET
+
+-   **Request Params**
+
++----------------+-------------------+-----------------+
+| **Param Name** | **Type / Values** | **Description** |
++================+===================+=================+
+| engineId       |                   |                 |
++----------------+-------------------+-----------------+
+| From           |                   |                 |
++----------------+-------------------+-----------------+
+| To             |                   |                 |
++----------------+-------------------+-----------------+
+| interval       |                   |                 |
++----------------+-------------------+-----------------+
+| tzOffset       |                   |                 |
++----------------+-------------------+-----------------+
+
+**Filter Options**
+
+-   **Path:** / dq-api/ {engineId}/ search/stats/ filterOptions
+
+-   **HTTP Method:** GET
+
+-   **Request Params**
+
++----------------+-------------------+-----------------+
+| **Param Name** | **Type / Values** | **Description** |
++================+===================+=================+
+| engineId       |                   |                 |
++----------------+-------------------+-----------------+
+| From           |                   |                 |
++----------------+-------------------+-----------------+
+| To             |                   |                 |
++----------------+-------------------+-----------------+
+
+**Auto\-Complete**
+
+-   **Path:** / dq-api/ {engineId}/ search/stats/ autoComplete
+
+-   **HTTP Method:** GET
+
+-   **Request Params**
+
++----------------+-------------------+-----------------+
+| **Param Name** | **Type / Values** | **Description** |
++================+===================+=================+
+| engineId       |                   |                 |
++----------------+-------------------+-----------------+
+| From           |                   |                 |
++----------------+-------------------+-----------------+
+| To             |                   |                 |
++----------------+-------------------+-----------------+
+| interval       |                   |                 |
++----------------+-------------------+-----------------+
+| tzOffset       |                   |                 |
++----------------+-------------------+-----------------+
