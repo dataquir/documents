@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting Started &mdash; dataQuir 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="dataQuir 1.0.0 documentation" href="index.html" />
+    <link rel="next" title="Search Service" href="search_service.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>Simplest way to integrate dataQuir Search &amp; Engagement Service, you need to follow four easy steps</dt>
+<dd><ul class="first last simple">
+<li>Create ?Search &amp; Engagement  Engine?</li>
+<li>Define Feed Plan</li>
+<li>Upload Feed</li>
+<li>Integrate Search / Engagement APIs in your application</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="create-engine">
+<h2>Create Engine<a class="headerlink" href="#create-engine" title="Permalink to this headline">¶</a></h2>
+<p>The very first step to get started with dataQuir ? Easy Search &amp; Engagement Service is to create a <cite>Search &amp; Engagement Engine</cite> for your application.
+You need to provide following details:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Engine Name - Any name by which you can easily identify your application</li>
+<li>Engine Type - There are two options for the engine type, one is <cite>Custom</cite> and the other is <cite>Crawl</cite>.  With <cite>Custom</cite> engine type, you are required to provide the feed definition and upload feed for getting the engine fully functional. On the other hand with <cite>Crawl</cite> engine type, you not worry about anything, your feed plan is automatically created and content is crawled by dataQuir crawler.</li>
+<li>Website Url - This url is used as base url if you have chosen engine type as <cite>Crawl</cite>.</li>
+<li>Time Zone - Time Zone is required so that the search and engagement analytics reports are created as per your time zone.</li>
+<li>Business Type</li>
+</ul>
+<img alt="images/create-engine.png" src="images/create-engine.png" />
+</div></blockquote>
+<p><strong>Note</strong>
+For each engine a unique <cite>engine-id</cite> is created that is used in all your search / engagement API paths</p>
+</div>
+<div class="section" id="define-feed-plan">
+<h2>Define Feed Plan<a class="headerlink" href="#define-feed-plan" title="Permalink to this headline">¶</a></h2>
+<p>Next you need to define the feed plan depending upon the nature of your business, such as a product feed plan for an E-Commerce application or news feed plan for a News Portal.  While defining the feed plan you are required to provide the list of fields and some details for each of the field such as - data type, whether the field  will be used for search and if field values can be single valued or multi-valued.  Once you define and save the feed plan, a link to download sample feed is created for the engine.</p>
+<dl class="docutils">
+<dt><strong>Note</strong></dt>
+<dd><ul class="first last simple">
+<li>Feed can be uploaded the either CSV format or JSON format.</li>
+<li>For CSV format fields are supposed to be comma separated.</li>
+<li>Single vs MultiValued fields</li>
+<li>A single valued field is used for which there can be just one value for the field, e.g. movie_title, there can be only one title for a movie.</li>
+<li>A multivalued field is required when there are more than one value present for the field, e.g. movie_gere, there can be multiple genres associated with a movie.</li>
+<li>In case of multi-valued field, all the field valued need to be separated by pipe(|).</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="upload-feed">
+<h2>Upload Feed<a class="headerlink" href="#upload-feed" title="Permalink to this headline">¶</a></h2>
+<p>Third step is to upload your feed. You can download the sample feed file for your engine, create your item feed similar to the sample feed and upload through the dashboard. Feed upload takes some time depending upon the size of the feed. Once feed upload is finished, your search APIs are ready for the integration</p>
+</div>
+<div class="section" id="api-integration">
+<h2>API Integration<a class="headerlink" href="#api-integration" title="Permalink to this headline">¶</a></h2>
+<p>Fourth and final step is to integrate search / engagement APIs in your application.
+After successful feed upload you can immediately test your search API using &#8216;Try Now&#8217;.</p>
+<dl class="docutils">
+<dt>Your</dt>
+<dd><ul class="first last simple">
+<li>Search API: /dq-api/engines/&lt;your-search-engine-id&gt;/search?q=&lt;query string&gt;</li>
+<li>Auto-complete API: /dq-api/engines/&lt;your-search-engine-id&gt;/search?q=&lt;query string&gt;</li>
+</ul>
+</dd>
+</dl>
+<p>For details of advanced search and auto-complete API parameters such as filter / facet/ geo-queries/ spell check, please refer our API documentation. See <a class="reference internal" href="api.html"><em>dataQuir APIs</em></a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Getting Started</a><ul>
+<li><a class="reference internal" href="#create-engine">Create Engine</a></li>
+<li><a class="reference internal" href="#define-feed-plan">Define Feed Plan</a></li>
+<li><a class="reference internal" href="#upload-feed">Upload Feed</a></li>
+<li><a class="reference internal" href="#api-integration">API Integration</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="introduction.html" title="previous chapter">Introduction</a></li>
+      <li>Next: <a href="search_service.html" title="next chapter">Search Service</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/getting_started.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, dataQuir.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="_sources/getting_started.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
