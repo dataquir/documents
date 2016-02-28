@@ -23,8 +23,7 @@ To get the complete report on the analytics dashboard you need to install dataQu
                 dq.type = 'text/javascript';
                 dq.async = true;
                 dq.src = ('https:' == document.location.protocol ? 
-                                 'https://localhost:8090/dc/resources' : 'http://localhost:8090/dc/resources') +                                         
-                                 '/js/dq-event-recorder.js';           
+                                 'https://events.dataquir.com/dc/resources' : 'http://events.dataquir.com/dc/resources')+                                        '/js/dq-event-recorder.js';           
                 var  s = document.getElementsByTagName('script')[0];
                 s.parentNode.insertBefore(dq, s);
 			})();
@@ -64,9 +63,9 @@ Event Attributes:
 	dataquir.event.push({
 			"page_view":{
 				"itemId": "Test01",
-				"itemName": "Test Product",
-				"pType": "Detail Page",
-				"categoryId", "Cat01"
+				"itemTitle": "Test Product",
+				"pType": "idp", //idp - Item Detail Page
+				"categoryId": "Cat01"
 			}
 		   });
 
@@ -90,7 +89,7 @@ Event Attributes:
 			"query": "Test Product",
 			"position":2,
 			"itemId":"itemId321",
-			"itemtitle":"iPhone S6"
+			"itemTitle":"iPhone S6"
 			}
 		});
 

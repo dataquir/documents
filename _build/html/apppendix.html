@@ -67,8 +67,7 @@
         dq.type = &#39;text/javascript&#39;;
         dq.async = true;
         dq.src = (&#39;https:&#39; == document.location.protocol ?
-                         &#39;https://localhost:8090/dc/resources&#39; : &#39;http://localhost:8090/dc/resources&#39;) +
-                         &#39;/js/dq-event-recorder.js&#39;;
+                         &#39;https://events.dataquir.com/dc/resources&#39; : &#39;http://events.dataquir.com/dc/resources&#39;)+                                        &#39;/js/dq-event-recorder.js&#39;;
         var  s = document.getElementsByTagName(&#39;script&#39;)[0];
         s.parentNode.insertBefore(dq, s);
                 })();
@@ -105,9 +104,9 @@ dataquir.user.push({&quot;userId&quot;: &quot;Website&#39;s user identifier&quot
 <div class="highlight-python"><div class="highlight"><pre><span></span>dataquir.event.push({
                 &quot;page_view&quot;:{
                         &quot;itemId&quot;: &quot;Test01&quot;,
-                        &quot;itemName&quot;: &quot;Test Product&quot;,
-                        &quot;pType&quot;: &quot;Detail Page&quot;,
-                        &quot;categoryId&quot;, &quot;Cat01&quot;
+                        &quot;itemTitle&quot;: &quot;Test Product&quot;,
+                        &quot;pType&quot;: &quot;idp&quot;, //idp - Item Detail Page
+                        &quot;categoryId&quot;: &quot;Cat01&quot;
                 }
            });
 </pre></div>
@@ -128,7 +127,7 @@ dataquir.user.push({&quot;userId&quot;: &quot;Website&#39;s user identifier&quot
                 <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;Test Product&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;position&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
                 <span class="s2">&quot;itemId&quot;</span><span class="p">:</span><span class="s2">&quot;itemId321&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;itemtitle&quot;</span><span class="p">:</span><span class="s2">&quot;iPhone S6&quot;</span>
+                <span class="s2">&quot;itemTitle&quot;</span><span class="p">:</span><span class="s2">&quot;iPhone S6&quot;</span>
                 <span class="p">}</span>
         <span class="p">});</span>
 </pre></div>

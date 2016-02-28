@@ -54,7 +54,7 @@
 <dl class="docutils">
 <dt>Simplest way to integrate dataQuir Search &amp; Engagement Service, you need to follow four easy steps</dt>
 <dd><ul class="first last simple">
-<li>Create ?Search &amp; Engagement  Engine?</li>
+<li>Create <cite>Search &amp; Engagement  Engine</cite></li>
 <li>Define Feed Plan</li>
 <li>Upload Feed</li>
 <li>Integrate Search / Engagement APIs in your application</li>
@@ -63,7 +63,7 @@
 </dl>
 <div class="section" id="create-engine">
 <h2>Create Engine<a class="headerlink" href="#create-engine" title="Permalink to this headline">¶</a></h2>
-<p>The very first step to get started with dataQuir ? Easy Search &amp; Engagement Service is to create a <cite>Search &amp; Engagement Engine</cite> for your application.
+<p>The very first step to get started with dataQuir services is to create a <cite>Search &amp; Engagement Engine</cite> for your application.
 You need to provide following details:</p>
 <blockquote>
 <div><ul class="simple">
@@ -75,7 +75,7 @@ You need to provide following details:</p>
 </ul>
 <img alt="images/create-engine.png" src="images/create-engine.png" />
 </div></blockquote>
-<p><strong>Note</strong>
+<p><strong>Note</strong>:
 For each engine a unique <cite>engine-id</cite> is created that is used in all your search / engagement API paths</p>
 </div>
 <div class="section" id="define-feed-plan">
@@ -88,7 +88,7 @@ For each engine a unique <cite>engine-id</cite> is created that is used in all y
 <li>For CSV format fields are supposed to be comma separated.</li>
 <li>Single vs MultiValued fields</li>
 <li>A single valued field is used for which there can be just one value for the field, e.g. movie_title, there can be only one title for a movie.</li>
-<li>A multivalued field is required when there are more than one value present for the field, e.g. movie_gere, there can be multiple genres associated with a movie.</li>
+<li>A multivalued field is required when there are more than one value present for the field, e.g. movie_genre, there can be multiple genres associated with a movie.</li>
 <li>In case of multi-valued field, all the field valued need to be separated by pipe(|).</li>
 </ul>
 </dd>
@@ -105,12 +105,12 @@ After successful feed upload you can immediately test your search API using &#82
 <dl class="docutils">
 <dt>Your</dt>
 <dd><ul class="first last simple">
-<li>Search API: /dq-api/engines/&lt;your-search-engine-id&gt;/search?q=&lt;query string&gt;</li>
-<li>Auto-complete API: /dq-api/engines/&lt;your-search-engine-id&gt;/search?q=&lt;query string&gt;</li>
+<li>Search API: <a class="reference external" href="http://api.dataquir.com/v1/engines">http://api.dataquir.com/v1/engines</a>/&lt;your-search-engine-id&gt;/search?q=&lt;query string&gt;</li>
+<li>Auto-complete API: <a class="reference external" href="http://api.dataquir.com/v1/engines">http://api.dataquir.com/v1/engines</a>/&lt;your-search-engine-id&gt;/search?q=&lt;query string&gt;</li>
 </ul>
 </dd>
 </dl>
-<p>For details of advanced search and auto-complete API parameters such as filter / facet/ geo-queries/ spell check, please refer our API documentation. See <a class="reference internal" href="api.html"><em>dataQuir APIs</em></a>.</p>
+<p>For details of advanced search and auto-complete API parameters such as filter / facet / geo-queries / spell check, please refer our API documentation. See <a class="reference internal" href="api.html"><em>dataQuir APIs</em></a>.</p>
 </div>
 </div>
 

@@ -8,14 +8,14 @@ datQuir APIs have been divided into four major groups:
 	* Analytics APIs
 
 **Note**
-All the APIs except the ‘Query APIs’ would require private key uniquely created for the account. Query APIs require the publicly shared ‘engine-key’ for queries intended for the particular engine. 
+All the APIs except the `Query APIs` would require private key uniquely created for the account. Query APIs require the publicly shared `engine-key` for queries intended for the particular engine. 
 
 Manage Engine API
 -----------------
 Create Search and Engagement Engine
 ***********************************
 
--   **Path**: /dq-api/engines
+-   **Path**: http://api.dataquir.com/v1/engines
 
 -   **HTTP Method**: POST
 
@@ -35,35 +35,35 @@ Create Search and Engagement Engine
 Get all engines details
 ***********************
 
--   **Path:** /dq-api/engines
+-   **Path:** http://api.dataquir.com/v1/engines
 
 -   **HTTP Method:** GET
 
 Get a particular engine details
 *******************************
 
--   **Path:** /dq-api/engines/ {engineId}
+-   **Path:** http://api.dataquir.com/v1/engines/ {engineId}
 
 -   **HTTP Method:** GET
 
 Get total records in the engine
 *******************************
 
--   **Path:** /dq-api/engines/ {engineId}/ totalRecords
+-   **Path:** http://api.dataquir.com/v1/engines/ {engineId}/ totalRecords
 
 -   **HTTP Method:** GET
 
 Delete an Engine
 ****************
 
--   **Path:** /dq-api/engines/ {engineId}
+-   **Path:** http://api.dataquir.com/v1/engines/ {engineId}
 
 -   **HTTP Method:** DELETE
 
 Define a feed plan
 ******************
 
--   **Path**: / dq-api/engines/{engineId}/feedPlan
+-   **Path**: http://api.dataquir.com/v1engines/{engineId}/feedPlan
 
 -   **HTTP Method**: POST
 
@@ -124,7 +124,7 @@ Define a feed plan
 Define Search Relevance Model
 *****************************
 
--   **Path**: / dq-api/engines/{engineId}/ searchRelevanceModel
+-   **Path**: http://api.dataquir.com/v1/engines/{engineId}/ searchRelevanceModel
 
 -   **HTTP Method**: POST
 
@@ -151,7 +151,7 @@ Define Search Relevance Model
 Define Synonyms
 ***************
 
--   **Path**: / dq-api/engines/{engineId}/ synonyms
+-   **Path**: http://api.dataquir.com/v1/engines/{engineId}/ synonyms
 
 -   **HTTP Method**: POST
 
@@ -177,7 +177,7 @@ Define Synonyms
 Define Similarity Model
 ***********************
 
--   **Path:** / dq-api/engines/{engineId}/ similarityModel
+-   **Path:** http://api.dataquir.com/v1/engines/{engineId}/ similarityModel
 
 -   **HTTP Method:** POST
 
@@ -211,7 +211,7 @@ Indexing API
 Feed upload
 ***********
 
--   **Path:** / dq-api/engines/{engineId}/ feed
+-   **Path:** http://api.dataquir.com/v1/engines/{engineId}/ feed
 
 -   **HTTP Method:** POST
 
@@ -224,7 +224,7 @@ Feed upload
 Batch Update
 ************
 
--   **Path:** / dq-api/engines/{ engineId}/ batch
+-   **Path:** http://api.dataquir.com/v1/engines/{ engineId}/ batch
 
 -   **HTTP Method:** POST
 
@@ -252,10 +252,10 @@ Batch Update
 	   ...
 	]
 
-Batch Delete
-************
+Batch Delete Records
+********************
 
--   **Path:** / dq-api/engines/{ engineId}/ batch
+-   **Path:** http://api.dataquir.com/v1/engines/{ engineId}/ batch
 
 -   **HTTP Method:** DELETE
 
@@ -275,21 +275,21 @@ Batch Delete
 Get Job Status
 **************
 
--   **Path:** / dq-api/engines/{ engineId}/ batch/ {jobId}
+-   **Path:** http://api.dataquir.com/v1/engines/{ engineId}/ batch/ {jobId}
 
 -   **HTTP Method:** GET
 
 Get Last 5 Jobs Status
 **********************
 
--   **Path:** / dq-api/engines/{ engineId}/ batch
+-   **Path:** http://api.dataquir.com/v1/engines/{ engineId}/ batch
 
 -   **HTTP Method:** GET
 
 Add / Update a Record
 *********************
 
--   **Path:** / dq-api/engines/{ engineId}/ record
+-   **Path:** http://api.dataquir.com/v1/engines/{ engineId}/ record
 
 -   **HTTP Method:** POST
 
@@ -317,21 +317,21 @@ Add / Update a Record
 Delete a Record
 ***************
 
--   **Path:** / dq-api/ {engineId}/record/{recordId}
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/record/{recordId}
 
 -   **HTTP Method:** DELETE
 
 Get a Record
 ************
 
--   **Path:** / dq-api/ {engineId}/record/{recordId}
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/record/{recordId}
 
 -   **HTTP Method:** GET
 
 Get Multiple Records
 ********************
 
--   **Path:** / dq-api/ {engineId}/record/records
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/record/records
 
 -   **HTTP Method:** POST
 
@@ -349,14 +349,14 @@ Get Multiple Records
 Clear all Records
 *****************
 
--   **Path:** / dq-api/ {engineId}/clear
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/clear
 
 -   **HTTP Method:** DELETE
 
 Crawl a Website
 ***************
 
--   **Path:** / dq-api/ {engineId}/ crawl
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/ crawl
 
 -   **HTTP Method:** POST
 
@@ -381,7 +381,7 @@ Query API
 Search
 ******
 
--   **Path:** / dq-api/ {engineId}/ search
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/ search
 
 -   **HTTP Method:** GET
 
@@ -426,7 +426,7 @@ Search
 Suggest
 *******
 
--   **Path:** / dq-api/ {engineId}/ suggest
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/ suggest
 
 -   **HTTP Method:** GET
 
@@ -463,11 +463,11 @@ Just following parameter is needed for default search:
 	* start 
 	* limit
 
-Example – q=nymar&start=0&limit=10
+Example \– q=nymar&start=0&limit=10
 
 Filters
 *******
-You can narrow down the search results by applytion filters.
+You can narrow down the search results by applying filters.
 Filters are of following two type:
 	* Text Filter
 	* Range Filter
@@ -476,7 +476,9 @@ Text Filter
 ###########
 	
 	Text filters are applied on the 'text' fields such as - genre, tags, country, clubs etc.
-	Parameter - filter
+	
+	Parameter \- filter
+	
 	Example\-
 	
 	Let's suppose, we want to filter search result by the criteria
@@ -596,7 +598,7 @@ Spellcheck : true|false
 Tune Search Relevance
 *********************
 
--   **Path:** / dq-api/ {engineId}/ tuneRelevancy
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/ tuneRelevancy
 
 -   **HTTP Method:** POST
 
@@ -630,7 +632,7 @@ Tune Search Relevance
 Tune Similarity Model
 *********************
 
--   **Path:** / dq-api/ {engineId}/ tuneSimilarityModel
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/ tuneSimilarityModel
 
 -   **HTTP Method:** POST
 
@@ -661,7 +663,7 @@ Tune Similarity Model
 Get Similar Records
 *******************
 
--   **Path:** / dq-api/ /{engineId}/similar/{recordId}
+-   **Path:** http://api.dataquir.com/v1/ /{engineId}/similar/{recordId}
 
 -   **HTTP Method:** GET
 
@@ -672,7 +674,7 @@ Analytics API
 Search analytics Overview
 *************************
 
--   **Path:** / dq-api/ {engineId}/ search/stats
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/ search/stats
 
 -   **HTTP Method:** GET
 
@@ -691,7 +693,7 @@ Search analytics Overview
 Top Queries
 ***********
 
--   **Path:** / dq-api/ {engineId}/ search/stats/ topQueries
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/ search/stats/ topQueries
 
 -   **HTTP Method:** GET
 
@@ -710,7 +712,7 @@ Top Queries
 Top Docs
 ********
 
--   **Path:** / dq-api/ {engineId}/ search/stats/ topDocs
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/ search/stats/ topDocs
 
 -   **HTTP Method:** GET
 
@@ -728,7 +730,7 @@ Top Docs
 Rate & Volume
 *************
 
--   **Path:** / dq-api/ {engineId}/ search/stats/ rateAndVolume
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/ search/stats/ rateAndVolume
 
 -   **HTTP Method:** GET
 
@@ -751,7 +753,7 @@ Rate & Volume
 CTR
 ***
 
--   **Path:** / dq-api/ {engineId}/ search/stats/ ctr
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/ search/stats/ ctr
 
 -   **HTTP Method:** GET
 
@@ -774,7 +776,7 @@ CTR
 Search Relevance
 ****************
 
--   **Path:** / dq-api/ {engineId}/ search/stats/ searchRelevance
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/ search/stats/ searchRelevance
 
 -   **HTTP Method:** GET
 
@@ -797,7 +799,7 @@ Search Relevance
 Sort Options
 ************
 
--   **Path:** / dq-api/ {engineId}/ search/stats/ sortOptions
+-   **Path:** http://api.dataquir.com/v1/ {engineId}/ search/stats/ sortOptions
 
 -   **HTTP Method:** GET
 
@@ -820,7 +822,7 @@ Sort Options
 Filter Options
 **************
 
--   **Path:** / dq-api/ {engineId}/ search/stats/ filterOptions
+-   **Path:** http://api.dataquir.com/v1/{engineId}/ search/stats/ filterOptions
 
 -   **HTTP Method:** GET
 
@@ -839,7 +841,7 @@ Filter Options
 Auto\-Complete
 **************
 
--   **Path:** / dq-api/ {engineId}/ search/stats/ autoComplete
+-   **Path:** http://api.dataquir.com/v1/{engineId}/ search/stats/ autoComplete
 
 -   **HTTP Method:** GET
 

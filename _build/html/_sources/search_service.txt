@@ -12,7 +12,7 @@ In `Manage Feed Plan` section you can define or re-define your search plan. A se
 
 Upload Feed
 -----------
-Using `Upload Feed` section, you can index data into your engine. Once feed plan is successfully defined, sample feed file in bot JSON and CSV formats can be downloaded from engine detail page.
+Using `Upload Feed` section, you can index data into your engine. Once feed plan is successfully defined, sample feed file in both JSON and CSV formats can be downloaded from engine detail page.
 
 Relevance Tuner
 ---------------
@@ -20,4 +20,4 @@ Relavance Tuner allows you define a custom ranking model as per use case.  You c
 
 Synonyms
 --------
-In `Synonyms` section you can define synoonym-sets for your search engine.
+In `Synonyms` section you can define synonym-sets for your search engine.

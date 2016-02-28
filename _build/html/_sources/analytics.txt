@@ -1,6 +1,6 @@
 Analytics
 =========
-dataQuir allows to see what your users are searching for, click-on and engaging with - while they are still searching, clicking, and visiting your site.
+dataQuir allows to see what your users are searching for, click-on and engaging with - while they are still searching, clicking and visiting your website.
 
 Search Analytics
 ----------------

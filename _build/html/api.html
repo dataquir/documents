@@ -61,13 +61,13 @@
 </ul>
 </div></blockquote>
 <p><strong>Note</strong>
-All the APIs except the ?Query APIs? would require private key uniquely created for the account. Query APIs require the publicly shared ?engine-key? for queries intended for the particular engine.</p>
+All the APIs except the <cite>Query APIs</cite> would require private key uniquely created for the account. Query APIs require the publicly shared <cite>engine-key</cite> for queries intended for the particular engine.</p>
 <div class="section" id="manage-engine-api">
 <h2>Manage Engine API<a class="headerlink" href="#manage-engine-api" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="create-search-and-engagement-engine">
 <h3>Create Search and Engagement Engine<a class="headerlink" href="#create-search-and-engagement-engine" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path</strong>: /dq-api/engines</li>
+<li><strong>Path</strong>: <a class="reference external" href="http://api.dataquir.com/v1/engines">http://api.dataquir.com/v1/engines</a></li>
 <li><strong>HTTP Method</strong>: POST</li>
 <li><strong>Request Payload</strong>:</li>
 </ul>
@@ -84,35 +84,35 @@ All the APIs except the ?Query APIs? would require private key uniquely created 
 <div class="section" id="get-all-engines-details">
 <h3>Get all engines details<a class="headerlink" href="#get-all-engines-details" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> /dq-api/engines</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/engines">http://api.dataquir.com/v1/engines</a></li>
 <li><strong>HTTP Method:</strong> GET</li>
 </ul>
 </div>
 <div class="section" id="get-a-particular-engine-details">
 <h3>Get a particular engine details<a class="headerlink" href="#get-a-particular-engine-details" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> /dq-api/engines/ {engineId}</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/engines/">http://api.dataquir.com/v1/engines/</a> {engineId}</li>
 <li><strong>HTTP Method:</strong> GET</li>
 </ul>
 </div>
 <div class="section" id="get-total-records-in-the-engine">
 <h3>Get total records in the engine<a class="headerlink" href="#get-total-records-in-the-engine" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> /dq-api/engines/ {engineId}/ totalRecords</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/engines/">http://api.dataquir.com/v1/engines/</a> {engineId}/ totalRecords</li>
 <li><strong>HTTP Method:</strong> GET</li>
 </ul>
 </div>
 <div class="section" id="delete-an-engine">
 <h3>Delete an Engine<a class="headerlink" href="#delete-an-engine" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> /dq-api/engines/ {engineId}</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/engines/">http://api.dataquir.com/v1/engines/</a> {engineId}</li>
 <li><strong>HTTP Method:</strong> DELETE</li>
 </ul>
 </div>
 <div class="section" id="define-a-feed-plan">
 <h3>Define a feed plan<a class="headerlink" href="#define-a-feed-plan" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path</strong>: / dq-api/engines/{engineId}/feedPlan</li>
+<li><strong>Path</strong>: <a class="reference external" href="http://api.dataquir.com/v1engines">http://api.dataquir.com/v1engines</a>/{engineId}/feedPlan</li>
 <li><strong>HTTP Method</strong>: POST</li>
 <li><strong>Request Payload</strong>:</li>
 </ul>
@@ -170,7 +170,7 @@ All the APIs except the ?Query APIs? would require private key uniquely created 
 <div class="section" id="define-search-relevance-model">
 <h3>Define Search Relevance Model<a class="headerlink" href="#define-search-relevance-model" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path</strong>: / dq-api/engines/{engineId}/ searchRelevanceModel</li>
+<li><strong>Path</strong>: <a class="reference external" href="http://api.dataquir.com/v1/engines">http://api.dataquir.com/v1/engines</a>/{engineId}/ searchRelevanceModel</li>
 <li><strong>HTTP Method</strong>: POST</li>
 <li>Request Payload:</li>
 </ul>
@@ -194,7 +194,7 @@ All the APIs except the ?Query APIs? would require private key uniquely created 
 <div class="section" id="define-synonyms">
 <h3>Define Synonyms<a class="headerlink" href="#define-synonyms" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path</strong>: / dq-api/engines/{engineId}/ synonyms</li>
+<li><strong>Path</strong>: <a class="reference external" href="http://api.dataquir.com/v1/engines">http://api.dataquir.com/v1/engines</a>/{engineId}/ synonyms</li>
 <li><strong>HTTP Method</strong>: POST</li>
 <li><strong>Request Payload</strong>:</li>
 </ul>
@@ -217,7 +217,7 @@ All the APIs except the ?Query APIs? would require private key uniquely created 
 <div class="section" id="define-similarity-model">
 <h3>Define Similarity Model<a class="headerlink" href="#define-similarity-model" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/engines/{engineId}/ similarityModel</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/engines">http://api.dataquir.com/v1/engines</a>/{engineId}/ similarityModel</li>
 <li><strong>HTTP Method:</strong> POST</li>
 <li><strong>Request Payload:</strong></li>
 </ul>
@@ -248,7 +248,7 @@ All the APIs except the ?Query APIs? would require private key uniquely created 
 <div class="section" id="feed-upload">
 <h3>Feed upload<a class="headerlink" href="#feed-upload" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/engines/{engineId}/ feed</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/engines">http://api.dataquir.com/v1/engines</a>/{engineId}/ feed</li>
 <li><strong>HTTP Method:</strong> POST</li>
 <li><strong>Request Param</strong><ul>
 <li>feedFile</li>
@@ -260,7 +260,7 @@ All the APIs except the ?Query APIs? would require private key uniquely created 
 <div class="section" id="batch-update">
 <h3>Batch Update<a class="headerlink" href="#batch-update" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/engines/{ engineId}/ batch</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/engines">http://api.dataquir.com/v1/engines</a>/{ engineId}/ batch</li>
 <li><strong>HTTP Method:</strong> POST</li>
 <li><strong>Request Payload</strong></li>
 </ul>
@@ -286,10 +286,10 @@ All the APIs except the ?Query APIs? would require private key uniquely created 
 </pre></div>
 </div>
 </div>
-<div class="section" id="batch-delete">
-<h3>Batch Delete<a class="headerlink" href="#batch-delete" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="batch-delete-records">
+<h3>Batch Delete Records<a class="headerlink" href="#batch-delete-records" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/engines/{ engineId}/ batch</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/engines">http://api.dataquir.com/v1/engines</a>/{ engineId}/ batch</li>
 <li><strong>HTTP Method:</strong> DELETE</li>
 <li><strong>Request Payload</strong></li>
 </ul>
@@ -306,21 +306,21 @@ All the APIs except the ?Query APIs? would require private key uniquely created 
 <div class="section" id="get-job-status">
 <h3>Get Job Status<a class="headerlink" href="#get-job-status" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/engines/{ engineId}/ batch/ {jobId}</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/engines">http://api.dataquir.com/v1/engines</a>/{ engineId}/ batch/ {jobId}</li>
 <li><strong>HTTP Method:</strong> GET</li>
 </ul>
 </div>
 <div class="section" id="get-last-5-jobs-status">
 <h3>Get Last 5 Jobs Status<a class="headerlink" href="#get-last-5-jobs-status" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/engines/{ engineId}/ batch</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/engines">http://api.dataquir.com/v1/engines</a>/{ engineId}/ batch</li>
 <li><strong>HTTP Method:</strong> GET</li>
 </ul>
 </div>
 <div class="section" id="add-update-a-record">
 <h3>Add / Update a Record<a class="headerlink" href="#add-update-a-record" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/engines/{ engineId}/ record</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/engines">http://api.dataquir.com/v1/engines</a>/{ engineId}/ record</li>
 <li><strong>HTTP Method:</strong> POST</li>
 <li><strong>Request Payload</strong></li>
 </ul>
@@ -346,21 +346,21 @@ All the APIs except the ?Query APIs? would require private key uniquely created 
 <div class="section" id="delete-a-record">
 <h3>Delete a Record<a class="headerlink" href="#delete-a-record" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/record/{recordId}</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/record/{recordId}</li>
 <li><strong>HTTP Method:</strong> DELETE</li>
 </ul>
 </div>
 <div class="section" id="get-a-record">
 <h3>Get a Record<a class="headerlink" href="#get-a-record" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/record/{recordId}</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/record/{recordId}</li>
 <li><strong>HTTP Method:</strong> GET</li>
 </ul>
 </div>
 <div class="section" id="get-multiple-records">
 <h3>Get Multiple Records<a class="headerlink" href="#get-multiple-records" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/record/records</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/record/records</li>
 <li><strong>HTTP Method:</strong> POST</li>
 <li>Request Payload</li>
 </ul>
@@ -375,14 +375,14 @@ All the APIs except the ?Query APIs? would require private key uniquely created 
 <div class="section" id="clear-all-records">
 <h3>Clear all Records<a class="headerlink" href="#clear-all-records" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/clear</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/clear</li>
 <li><strong>HTTP Method:</strong> DELETE</li>
 </ul>
 </div>
 <div class="section" id="crawl-a-website">
 <h3>Crawl a Website<a class="headerlink" href="#crawl-a-website" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/ crawl</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/ crawl</li>
 <li><strong>HTTP Method:</strong> POST</li>
 <li><strong>Request Payload</strong></li>
 </ul>
@@ -404,7 +404,7 @@ All the APIs except the ?Query APIs? would require private key uniquely created 
 <div class="section" id="search">
 <h3>Search<a class="headerlink" href="#search" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/ search</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/ search</li>
 <li><strong>HTTP Method:</strong> GET</li>
 <li><strong>Request Parameters</strong></li>
 </ul>
@@ -491,7 +491,7 @@ All the APIs except the ?Query APIs? would require private key uniquely created 
 <div class="section" id="suggest">
 <h3>Suggest<a class="headerlink" href="#suggest" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/ suggest</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/ suggest</li>
 <li><strong>HTTP Method:</strong> GET</li>
 <li><strong>Request Parameters</strong></li>
 </ul>
@@ -562,7 +562,7 @@ All the APIs except the ?Query APIs? would require private key uniquely created 
 </div>
 <div class="section" id="filters">
 <h3>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h3>
-<p>You can narrow down the search results by applytion filters.
+<p>You can narrow down the search results by applying filters.
 Filters are of following two type:</p>
 <blockquote>
 <div><ul class="simple">
@@ -573,9 +573,9 @@ Filters are of following two type:</p>
 <div class="section" id="text-filter">
 <h4>Text Filter<a class="headerlink" href="#text-filter" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p>Text filters are applied on the &#8216;text&#8217; fields such as - genre, tags, country, clubs etc.
-Parameter - filter
-Example-</p>
+<div><p>Text filters are applied on the &#8216;text&#8217; fields such as - genre, tags, country, clubs etc.</p>
+<p>Parameter - filter</p>
+<p>Example-</p>
 <p>Let&#8217;s suppose, we want to filter search result by the criteria</p>
 <ul class="simple">
 <li>colour of the item is either red or blue</li>
@@ -678,7 +678,7 @@ Suppose we want the count of following age ranges in the search result
 <div class="section" id="tune-search-relevance">
 <h3>Tune Search Relevance<a class="headerlink" href="#tune-search-relevance" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/ tuneRelevancy</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/ tuneRelevancy</li>
 <li><strong>HTTP Method:</strong> POST</li>
 <li><strong>Request Payload</strong></li>
 </ul>
@@ -709,7 +709,7 @@ Suppose we want the count of following age ranges in the search result
 <div class="section" id="tune-similarity-model">
 <h3>Tune Similarity Model<a class="headerlink" href="#tune-similarity-model" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/ tuneSimilarityModel</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/ tuneSimilarityModel</li>
 <li><strong>HTTP Method:</strong> POST</li>
 <li><strong>Request Payload</strong></li>
 </ul>
@@ -738,7 +738,7 @@ Suppose we want the count of following age ranges in the search result
 <div class="section" id="get-similar-records">
 <h3>Get Similar Records<a class="headerlink" href="#get-similar-records" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ /{engineId}/similar/{recordId}</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> /{engineId}/similar/{recordId}</li>
 <li><strong>HTTP Method:</strong> GET</li>
 </ul>
 </div>
@@ -748,7 +748,7 @@ Suppose we want the count of following age ranges in the search result
 <div class="section" id="search-analytics-overview">
 <h3>Search analytics Overview<a class="headerlink" href="#search-analytics-overview" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/ search/stats</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/ search/stats</li>
 <li><strong>HTTP Method:</strong> GET</li>
 <li><strong>Request Params</strong></li>
 </ul>
@@ -783,7 +783,7 @@ Suppose we want the count of following age ranges in the search result
 <div class="section" id="top-queries">
 <h3>Top Queries<a class="headerlink" href="#top-queries" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/ search/stats/ topQueries</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/ search/stats/ topQueries</li>
 <li><strong>HTTP Method:</strong> GET</li>
 <li><strong>Request Params</strong></li>
 </ul>
@@ -818,7 +818,7 @@ Suppose we want the count of following age ranges in the search result
 <div class="section" id="top-docs">
 <h3>Top Docs<a class="headerlink" href="#top-docs" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/ search/stats/ topDocs</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/ search/stats/ topDocs</li>
 <li><strong>HTTP Method:</strong> GET</li>
 <li><strong>Request Params</strong></li>
 </ul>
@@ -853,7 +853,7 @@ Suppose we want the count of following age ranges in the search result
 <div class="section" id="rate-volume">
 <h3>Rate &amp; Volume<a class="headerlink" href="#rate-volume" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/ search/stats/ rateAndVolume</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/ search/stats/ rateAndVolume</li>
 <li><strong>HTTP Method:</strong> GET</li>
 <li><strong>Request Params</strong></li>
 </ul>
@@ -896,7 +896,7 @@ Suppose we want the count of following age ranges in the search result
 <div class="section" id="ctr">
 <h3>CTR<a class="headerlink" href="#ctr" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/ search/stats/ ctr</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/ search/stats/ ctr</li>
 <li><strong>HTTP Method:</strong> GET</li>
 <li><strong>Request Params</strong></li>
 </ul>
@@ -939,7 +939,7 @@ Suppose we want the count of following age ranges in the search result
 <div class="section" id="search-relevance">
 <h3>Search Relevance<a class="headerlink" href="#search-relevance" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/ search/stats/ searchRelevance</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/ search/stats/ searchRelevance</li>
 <li><strong>HTTP Method:</strong> GET</li>
 <li><strong>Request Params</strong></li>
 </ul>
@@ -982,7 +982,7 @@ Suppose we want the count of following age ranges in the search result
 <div class="section" id="sort-options">
 <h3>Sort Options<a class="headerlink" href="#sort-options" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/ search/stats/ sortOptions</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/ search/stats/ sortOptions</li>
 <li><strong>HTTP Method:</strong> GET</li>
 <li><strong>Request Params</strong></li>
 </ul>
@@ -1025,7 +1025,7 @@ Suppose we want the count of following age ranges in the search result
 <div class="section" id="filter-options">
 <h3>Filter Options<a class="headerlink" href="#filter-options" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/ search/stats/ filterOptions</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1">http://api.dataquir.com/v1</a>/{engineId}/ search/stats/ filterOptions</li>
 <li><strong>HTTP Method:</strong> GET</li>
 <li><strong>Request Params</strong></li>
 </ul>
@@ -1060,7 +1060,7 @@ Suppose we want the count of following age ranges in the search result
 <div class="section" id="auto-complete">
 <h3>Auto-Complete<a class="headerlink" href="#auto-complete" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> / dq-api/ {engineId}/ search/stats/ autoComplete</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1">http://api.dataquir.com/v1</a>/{engineId}/ search/stats/ autoComplete</li>
 <li><strong>HTTP Method:</strong> GET</li>
 <li><strong>Request Params</strong></li>
 </ul>
@@ -1127,7 +1127,7 @@ Suppose we want the count of following age ranges in the search result
 <li><a class="reference internal" href="#indexing-api">Indexing API</a><ul>
 <li><a class="reference internal" href="#feed-upload">Feed upload</a></li>
 <li><a class="reference internal" href="#batch-update">Batch Update</a></li>
-<li><a class="reference internal" href="#batch-delete">Batch Delete</a></li>
+<li><a class="reference internal" href="#batch-delete-records">Batch Delete Records</a></li>
 <li><a class="reference internal" href="#get-job-status">Get Job Status</a></li>
 <li><a class="reference internal" href="#get-last-5-jobs-status">Get Last 5 Jobs Status</a></li>
 <li><a class="reference internal" href="#add-update-a-record">Add / Update a Record</a></li>

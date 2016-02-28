@@ -10,7 +10,7 @@ Different components of dataQuir Search & Engagement Service are:
 	* Full-Text Search
 	* Autocompletion
 	* Filters
-	* Facetd Naviggation
+	* Faceted Navigation
 	* Sorting
 	* Relevance Tuner
 	* Synonym Support
@@ -30,12 +30,12 @@ Search & Engagement Engine
 
 Registration
 ------------
-First step to get started with dataQuir services is to `Register <http://dataquir.com/register.html>`_
+First step to get started with dataQuir services is to `Register <http://dataquir.com/register.html>`_.
 After successful registration the account is automatically subscribed to '14 Days Trial Plan'.
 
 Pricing
 -------
-dataQuir comes with a transparent `Pricing Plans <http://dataquir.com/pricing.html>`_
+dataQuir comes with a transparent `Pricing Plans <http://dataquir.com/pricing.html>`_.
 Pricing depends upon following four factors:
 	* Nuumber of records
 	* Number of operations (Read + Write)
