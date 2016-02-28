@@ -537,6 +537,7 @@ Range Facet
 	Parameter \- rangeFacet
 	Example \-
 	Suppose we want the count of following age ranges in the search result
+	
 	* less than 18
 	* 19 to 35
 	* 36 t0 60
