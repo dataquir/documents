@@ -563,7 +563,7 @@ rangeFacet=age:*-18|19-35|36-60|60-*,rating:*-2|2-3|3-*
 Sorting
 *******
 
-Search results are by default sorted on the basis of relevance score. Results can be sorted on the basis of any other criteria such as – alphabetical sort on name or sort by age descending.
+Search results are by default sorted on the basis of relevance score. Results can be sorted on the basis of any other criteria such as - alphabetical sort on name or sort by age descending.
 
 Parameter
 
