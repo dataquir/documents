@@ -533,25 +533,27 @@ Text Facet
 Range Facet
 ###########
 
-	Range facets work with numeric data type or date data type.
-	Parameter \- rangeFacet
-	Example \-
-	Suppose we want the count of following age ranges in the search result
+Range facets work with numeric data type or date data type.
 	
+Parameter \- rangeFacet
+
+Example \-
+
+Suppose we want the count of following age ranges in the search result
 	* less than 18
 	* 19 to 35
 	* 36 t0 60
 	* more than 60
 
-	Add following parameter to the query string
+Add following parameter to the query string
 	
-	rangeFacet=age:*-18|19-35|36-60|60-*
+rangeFacet=age:*-18|19-35|36-60|60-*
 
-	Range facets on two numeric fields:
+Range facets on two numeric fields:
 	
-	rangeFacet=age:*-18|19-35|36-60|60-*,rating:*-2|2-3|3-*
+rangeFacet=age:*-18|19-35|36-60|60-*,rating:*-2|2-3|3-*
 
-	**Note**
+**Note**
 	
 	* Range facets for different fields are separated by comma
 	* Range facet count of multiple ranges of the same field are separated by pipe (|)
