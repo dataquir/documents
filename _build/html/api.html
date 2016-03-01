@@ -630,21 +630,26 @@ facet=country,club</div></blockquote>
 </div>
 <div class="section" id="range-facet">
 <h4>Range Facet<a class="headerlink" href="#range-facet" title="Permalink to this headline">¶</a></h4>
-<blockquote>
-<div><p>Range facets work with numeric data type or date data type.
-Parameter - rangeFacet
-Example -
-Suppose we want the count of following age ranges in the search result
-* less than 18
-* 19 to 35
-* 36 t0 60
-* more than 60</p>
+<p>Range facets work with numeric data type or date data type.</p>
+<p>Parameter - rangeFacet</p>
+<p>Example -</p>
+<dl class="docutils">
+<dt>Suppose we want the count of following age ranges in the search result</dt>
+<dd><ul class="first last simple">
+<li>less than 18</li>
+<li>19 to 35</li>
+<li>36 t0 60</li>
+<li>more than 60</li>
+</ul>
+</dd>
+</dl>
 <p>Add following parameter to the query string</p>
 <p>rangeFacet=age:<em>-18|19-35|36-60|60-</em></p>
 <p>Range facets on two numeric fields:</p>
 <p>rangeFacet=age:<em>-18|19-35|36-60|60-</em>,rating:<em>-2|2-3|3-</em></p>
 <p><strong>Note</strong></p>
-<ul class="simple">
+<blockquote>
+<div><ul class="simple">
 <li>Range facets for different fields are separated by comma</li>
 <li>Range facet count of multiple ranges of the same field are separated by pipe (|)</li>
 <li>Range is specified as a-b where a is the lower limit and b is the upper limit</li>
@@ -655,7 +660,7 @@ Suppose we want the count of following age ranges in the search result
 </div>
 <div class="section" id="sorting">
 <h3>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">¶</a></h3>
-<p>Search results are by default sorted on the basis of relevance score. Results can be sorted on the basis of any other criteria such ? alphabetical sort on name or sort by age descending.</p>
+<p>Search results are by default sorted on the basis of relevance score. Results can be sorted on the basis of any other criteria such as - alphabetical sort on name or sort by age descending.</p>
 <p>Parameter</p>
 <p>sort : &lt;field1&gt; asc|desc,&lt;field2&gt;asc|desc</p>
 <p>Example : sort=rating asc,age desc</p>
@@ -709,7 +714,7 @@ Suppose we want the count of following age ranges in the search result
 <div class="section" id="tune-similarity-model">
 <h3>Tune Similarity Model<a class="headerlink" href="#tune-similarity-model" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1/">http://api.dataquir.com/v1/</a> {engineId}/ tuneSimilarityModel</li>
+<li><strong>Path:</strong> <a class="reference external" href="http://api.dataquir.com/v1">http://api.dataquir.com/v1</a>/{engineId}/ tuneSimilarityModel</li>
 <li><strong>HTTP Method:</strong> POST</li>
 <li><strong>Request Payload</strong></li>
 </ul>
@@ -1223,7 +1228,7 @@ Suppose we want the count of following age ranges in the search result
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2016, dataQuir.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
     </div>
   </body>
 </html>

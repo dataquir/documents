@@ -37,7 +37,7 @@ Pricing
 -------
 dataQuir comes with a transparent `Pricing Plans <http://dataquir.com/pricing.html>`_.
 Pricing depends upon following four factors:
-	* Nuumber of records
+	* Number of records
 	* Number of operations (Read + Write)
 		* Every read / query is considered an operation
 		* Every write is considered as an operation

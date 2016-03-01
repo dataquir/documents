@@ -23,7 +23,8 @@ To get the complete report on the analytics dashboard you need to install dataQu
                 dq.type = 'text/javascript';
                 dq.async = true;
                 dq.src = ('https:' == document.location.protocol ? 
-                                 'https://events.dataquir.com/dc/resources' : 'http://events.dataquir.com/dc/resources')+                                        '/js/dq-event-recorder.js';           
+                                 'https://analytics.dataquir.com/v1/resources' : 'http://analytics.dataquir.com/v1/resources')+                            
+								 '/js/dq-event-recorder.js';           
                 var  s = document.getElementsByTagName('script')[0];
                 s.parentNode.insertBefore(dq, s);
 			})();
