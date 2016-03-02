@@ -1,6 +1,6 @@
 Introduction
 ============
-dataQuir is hosted Search & Engagement service which helps you add search feature in your website or app and integrate different engagement services is easiest possible way.
+dataQuir is hosted Search & Engagement service which helps you add search feature in your website or app and integrate different engagement services in easiest possible way.
 
 Services
 --------
