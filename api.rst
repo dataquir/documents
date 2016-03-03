@@ -15,7 +15,7 @@ Manage Engine API
 Create Search and Engagement Engine
 ***********************************
 
--   **Path**: http://api.dataquir.com/v1/engines
+-   **Path**: http://apis.dataquir.com/v1/engines
 
 -   **HTTP Method**: POST
 
@@ -35,35 +35,35 @@ Create Search and Engagement Engine
 Get all engines details
 ***********************
 
--   **Path:** http://api.dataquir.com/v1/engines
+-   **Path:** http://apis.dataquir.com/v1/engines
 
 -   **HTTP Method:** GET
 
 Get a particular engine details
 *******************************
 
--   **Path:** http://api.dataquir.com/v1/engines/ {engineId}
+-   **Path:** http://apis.dataquir.com/v1/engines/ {engineId}
 
 -   **HTTP Method:** GET
 
 Get total records in the engine
 *******************************
 
--   **Path:** http://api.dataquir.com/v1/engines/ {engineId}/ totalRecords
+-   **Path:** http://apis.dataquir.com/v1/engines/ {engineId}/ totalRecords
 
 -   **HTTP Method:** GET
 
 Delete an Engine
 ****************
 
--   **Path:** http://api.dataquir.com/v1/engines/ {engineId}
+-   **Path:** http://apis.dataquir.com/v1/engines/ {engineId}
 
 -   **HTTP Method:** DELETE
 
 Define a feed plan
 ******************
 
--   **Path**: http://api.dataquir.com/v1engines/{engineId}/feedPlan
+-   **Path**: http://apis.dataquir.com/v1engines/{engineId}/feedPlan
 
 -   **HTTP Method**: POST
 
@@ -124,7 +124,7 @@ Define a feed plan
 Define Search Relevance Model
 *****************************
 
--   **Path**: http://api.dataquir.com/v1/engines/{engineId}/ searchRelevanceModel
+-   **Path**: http://apis.dataquir.com/v1/engines/{engineId}/ searchRelevanceModel
 
 -   **HTTP Method**: POST
 
@@ -151,7 +151,7 @@ Define Search Relevance Model
 Define Synonyms
 ***************
 
--   **Path**: http://api.dataquir.com/v1/engines/{engineId}/ synonyms
+-   **Path**: http://apis.dataquir.com/v1/engines/{engineId}/ synonyms
 
 -   **HTTP Method**: POST
 
@@ -177,7 +177,7 @@ Define Synonyms
 Define Similarity Model
 ***********************
 
--   **Path:** http://api.dataquir.com/v1/engines/{engineId}/ similarityModel
+-   **Path:** http://apis.dataquir.com/v1/engines/{engineId}/ similarityModel
 
 -   **HTTP Method:** POST
 
@@ -211,7 +211,7 @@ Indexing API
 Feed upload
 ***********
 
--   **Path:** http://api.dataquir.com/v1/engines/{engineId}/ feed
+-   **Path:** http://apis.dataquir.com/v1/engines/{engineId}/ feed
 
 -   **HTTP Method:** POST
 
@@ -224,7 +224,7 @@ Feed upload
 Batch Update
 ************
 
--   **Path:** http://api.dataquir.com/v1/engines/{ engineId}/ batch
+-   **Path:** http://apis.dataquir.com/v1/engines/{ engineId}/ batch
 
 -   **HTTP Method:** POST
 
@@ -255,7 +255,7 @@ Batch Update
 Batch Delete Records
 ********************
 
--   **Path:** http://api.dataquir.com/v1/engines/{ engineId}/ batch
+-   **Path:** http://apis.dataquir.com/v1/engines/{ engineId}/ batch
 
 -   **HTTP Method:** DELETE
 
@@ -275,21 +275,21 @@ Batch Delete Records
 Get Job Status
 **************
 
--   **Path:** http://api.dataquir.com/v1/engines/{ engineId}/ batch/ {jobId}
+-   **Path:** http://apis.dataquir.com/v1/engines/{ engineId}/ batch/ {jobId}
 
 -   **HTTP Method:** GET
 
 Get Last 5 Jobs Status
 **********************
 
--   **Path:** http://api.dataquir.com/v1/engines/{ engineId}/ batch
+-   **Path:** http://apis.dataquir.com/v1/engines/{ engineId}/ batch
 
 -   **HTTP Method:** GET
 
 Add / Update a Record
 *********************
 
--   **Path:** http://api.dataquir.com/v1/engines/{ engineId}/ record
+-   **Path:** http://apis.dataquir.com/v1/engines/{ engineId}/ record
 
 -   **HTTP Method:** POST
 
@@ -317,21 +317,21 @@ Add / Update a Record
 Delete a Record
 ***************
 
--   **Path:** http://api.dataquir.com/v1/ {engineId}/record/{recordId}
+-   **Path:** http://apis.dataquir.com/v1/ {engineId}/record/{recordId}
 
 -   **HTTP Method:** DELETE
 
 Get a Record
 ************
 
--   **Path:** http://api.dataquir.com/v1/ {engineId}/record/{recordId}
+-   **Path:** http://apis.dataquir.com/v1/ {engineId}/record/{recordId}
 
 -   **HTTP Method:** GET
 
 Get Multiple Records
 ********************
 
--   **Path:** http://api.dataquir.com/v1/ {engineId}/record/records
+-   **Path:** http://apis.dataquir.com/v1/ {engineId}/record/records
 
 -   **HTTP Method:** POST
 
@@ -349,14 +349,14 @@ Get Multiple Records
 Clear all Records
 *****************
 
--   **Path:** http://api.dataquir.com/v1/ {engineId}/clear
+-   **Path:** http://apis.dataquir.com/v1/ {engineId}/clear
 
 -   **HTTP Method:** DELETE
 
 Crawl a Website
 ***************
 
--   **Path:** http://api.dataquir.com/v1/ {engineId}/ crawl
+-   **Path:** http://apis.dataquir.com/v1/ {engineId}/ crawl
 
 -   **HTTP Method:** POST
 
@@ -381,7 +381,7 @@ Query API
 Search
 ******
 
--   **Path:** http://api.dataquir.com/v1/ {engineId}/ search
+-   **Path:** http://apis.dataquir.com/v1/ {engineId}/ search
 
 -   **HTTP Method:** GET
 
@@ -426,7 +426,7 @@ Search
 Suggest
 *******
 
--   **Path:** http://api.dataquir.com/v1/ {engineId}/ suggest
+-   **Path:** http://apis.dataquir.com/v1/ {engineId}/ suggest
 
 -   **HTTP Method:** GET
 
@@ -601,7 +601,7 @@ Spellcheck : true|false
 Tune Search Relevance
 *********************
 
--   **Path:** http://api.dataquir.com/v1/ {engineId}/ tuneRelevancy
+-   **Path:** http://apis.dataquir.com/v1/ {engineId}/ tuneRelevancy
 
 -   **HTTP Method:** POST
 
@@ -635,7 +635,7 @@ Tune Search Relevance
 Tune Similarity Model
 *********************
 
--   **Path:** http://api.dataquir.com/v1/{engineId}/ tuneSimilarityModel
+-   **Path:** http://apis.dataquir.com/v1/{engineId}/ tuneSimilarityModel
 
 -   **HTTP Method:** POST
 
@@ -666,7 +666,7 @@ Tune Similarity Model
 Get Similar Records
 *******************
 
--   **Path:** http://api.dataquir.com/v1/ /{engineId}/similar/{recordId}
+-   **Path:** http://apis.dataquir.com/v1/ /{engineId}/similar/{recordId}
 
 -   **HTTP Method:** GET
 
@@ -677,7 +677,7 @@ Analytics API
 Search analytics Overview
 *************************
 
--   **Path:** http://api.dataquir.com/v1/ {engineId}/ search/stats
+-   **Path:** http://apis.dataquir.com/v1/ {engineId}/ search/stats
 
 -   **HTTP Method:** GET
 
@@ -696,7 +696,7 @@ Search analytics Overview
 Top Queries
 ***********
 
--   **Path:** http://api.dataquir.com/v1/ {engineId}/ search/stats/ topQueries
+-   **Path:** http://apis.dataquir.com/v1/ {engineId}/ search/stats/ topQueries
 
 -   **HTTP Method:** GET
 
@@ -715,7 +715,7 @@ Top Queries
 Top Docs
 ********
 
--   **Path:** http://api.dataquir.com/v1/ {engineId}/ search/stats/ topDocs
+-   **Path:** http://apis.dataquir.com/v1/ {engineId}/ search/stats/ topDocs
 
 -   **HTTP Method:** GET
 
@@ -733,7 +733,7 @@ Top Docs
 Rate & Volume
 *************
 
--   **Path:** http://api.dataquir.com/v1/ {engineId}/ search/stats/ rateAndVolume
+-   **Path:** http://apis.dataquir.com/v1/ {engineId}/ search/stats/ rateAndVolume
 
 -   **HTTP Method:** GET
 
@@ -756,7 +756,7 @@ Rate & Volume
 CTR
 ***
 
--   **Path:** http://api.dataquir.com/v1/ {engineId}/ search/stats/ ctr
+-   **Path:** http://apis.dataquir.com/v1/ {engineId}/ search/stats/ ctr
 
 -   **HTTP Method:** GET
 
@@ -779,7 +779,7 @@ CTR
 Search Relevance
 ****************
 
--   **Path:** http://api.dataquir.com/v1/ {engineId}/ search/stats/ searchRelevance
+-   **Path:** http://apis.dataquir.com/v1/ {engineId}/ search/stats/ searchRelevance
 
 -   **HTTP Method:** GET
 
@@ -802,7 +802,7 @@ Search Relevance
 Sort Options
 ************
 
--   **Path:** http://api.dataquir.com/v1/ {engineId}/ search/stats/ sortOptions
+-   **Path:** http://apis.dataquir.com/v1/ {engineId}/ search/stats/ sortOptions
 
 -   **HTTP Method:** GET
 
@@ -825,7 +825,7 @@ Sort Options
 Filter Options
 **************
 
--   **Path:** http://api.dataquir.com/v1/{engineId}/ search/stats/ filterOptions
+-   **Path:** http://apis.dataquir.com/v1/{engineId}/ search/stats/ filterOptions
 
 -   **HTTP Method:** GET
 
@@ -844,7 +844,7 @@ Filter Options
 Auto\-Complete
 **************
 
--   **Path:** http://api.dataquir.com/v1/{engineId}/ search/stats/ autoComplete
+-   **Path:** http://apis.dataquir.com/v1/{engineId}/ search/stats/ autoComplete
 
 -   **HTTP Method:** GET
 
