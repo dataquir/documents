@@ -29,7 +29,7 @@ To get the complete report on the analytics dashboard you need to install dataQu
                 s.parentNode.insertBefore(dq, s);
 			})();
 
-	dataquir.engine.push({"engineId":"Engine Id", "apiKey": "Your dataQuir engine public API Key"});
+	dataquir.engine.push({"engineId":"Engine Id", "engineKey": "Your dataQuir engine public Key"});
 	dataquir.user.push({"userId": "Website's user identifier", "sessionId": "Session Id set by website"});
 	
 *Note:*
